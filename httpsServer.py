@@ -15,7 +15,7 @@ import os
 
 CERTPATH = "/tmp/localhost.pem"
 if not os.path.exists(CERTPATH):
-    os.system(f"openssl req -new -x509 -keyout {CERTPATH} -out {CERTPATH} -days 365 -nodes -subj \"/C=UK/O=HackTheBox/OU=HackTheBox/CN=wd.htb.uk\" >/dev/null")
+    os.system(f"openssl req -new -x509 -keyout {CERTPATH} -out {CERTPATH} -days 365 -nodes -subj \"/C=UK/O=https-server/OU=https-server/CN=https.server.py\" >/dev/null")
 
 port = 443
 if len(sys.argv) > 1:
